@@ -1,6 +1,6 @@
 .sidebar {
 
-    @apply absolute top-0 left-0 xl:relative h-full xl:w-1/5 bg-sec-background px-7.5 py-2.5 border-r border-border-primary;
+    @apply absolute top-0 left-0 xl:relative h-full xl:w-1/5 bg-sec-background px-7.5 py-2.5 border-r border-border-primary z-20;
 
     .logo {
 
