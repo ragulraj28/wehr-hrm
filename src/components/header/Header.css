@@ -1,0 +1,53 @@
+header {
+
+    @apply py-6 border-b border-b-border-secondary flex items-center justify-between gap-5 ml-5 pr-5 md:pr-12.5 md:ml-12.5 text-tertiary font-medium;
+
+    svg {
+
+        @apply text-[#b2b2b2];
+
+    }
+
+    .left-col {
+
+        @apply max-w-86 w-full;
+
+        .page-title {
+
+            @apply font-medium text-2xl text-tertiary;
+
+        }
+
+    }
+
+    .right-col {
+
+        @apply flex items-center gap-7.5;
+
+        .user-info {
+
+            @apply flex items-center gap-3 cursor-pointer;
+
+            .user-profile {
+
+                @apply w-10.5 h-10.5 rounded-full overflow-hidden object-cover;
+
+                img {
+
+                    @apply h-full w-full;
+
+                }
+
+            }
+
+            .user-name {
+
+                @apply hidden lg:block;
+                
+            }
+
+        }
+
+    }
+
+}

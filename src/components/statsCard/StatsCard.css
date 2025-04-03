@@ -1,0 +1,17 @@
+.stats-card {
+
+    @apply py-8 px-5 rounded-lg font-medium w-full h-full;
+
+    .stats-title {
+
+        @apply text-lg mb-4;
+
+    }
+
+    .stats-count {
+
+        @apply text-4xl;
+
+    }
+
+}

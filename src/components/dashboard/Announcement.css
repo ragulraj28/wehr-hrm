@@ -1,0 +1,61 @@
+.announcement {
+
+    @apply rounded-xl border border-border-primary;
+
+    .announcement-header {
+
+        @apply flex items-center justify-between py-4 px-5;
+
+        .filter {
+
+            @apply border border-border-secondary text-xs text-sec-sub-title px-2 py-1 rounded;
+
+        }
+
+    }
+
+    .announcement-body {
+
+        @apply px-5;
+
+        .announcement-card {
+
+            @apply flex items-center gap-5 justify-between border border-border-secondary rounded-md py-3 px-4 bg-sec-background mb-1.5 last:mb-0;
+
+            .info {
+
+                .card-title {
+
+                    @apply text-sec-title mb-1.5;
+
+                }
+
+                .time-stamp {
+
+                    @apply text-[10px] text-primary-sub-title;
+
+                }
+
+            }
+
+            .options {
+
+                svg {
+
+                    @apply text-gray-400;
+
+                }
+                
+            }
+            
+        }
+
+    }
+
+    .announcement-footer {
+
+        @apply border-t border-border-primary text-center p-2.5 text-primary font-medium text-sm;
+
+    }
+
+}

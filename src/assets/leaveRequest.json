@@ -1,0 +1,82 @@
+[
+    {
+        "empId": "11D001",
+        "empName": "MAGHESH",
+        "empEmail": "magesh@Dotcod.in",
+        "empLeaveType": "Sick Leave",
+        "empLeaveReason": "Fever and cold",
+        "empNoOfDays": 2,
+        "empLeaveRequestDate": "10/03/2024 - 11/03/2024",
+        "empLeaveStatus": "Approved"
+    },
+    {
+        "empId": "11D002",
+        "empName": "Tesla",
+        "empEmail": "Rsahull@Dotcod.in",
+        "empLeaveType": "Casual Leave",
+        "empLeaveReason": "Family function",
+        "empNoOfDays": 3,
+        "empLeaveRequestDate": "05/04/2024 - 07/04/2024",
+        "empLeaveStatus": "Pending"
+    },
+    {
+        "empId": "11D003",
+        "empName": "GM",
+        "empEmail": "gm@Dotcod.in",
+        "empLeaveType": "Sick Leave",
+        "empLeaveReason": "Back pain",
+        "empNoOfDays": 1,
+        "empLeaveRequestDate": "20/02/2024",
+        "empLeaveStatus": "Rejected"
+    },
+    {
+        "empId": "11D004",
+        "empName": "AARP",
+        "empEmail": "aarp@Dotcod.in",
+        "empLeaveType": "Casual Leave",
+        "empLeaveReason": "Travel plan",
+        "empNoOfDays": 5,
+        "empLeaveRequestDate": "01/05/2024 - 05/05/2024",
+        "empLeaveStatus": "Approved"
+    },
+    {
+        "empId": "11D005",
+        "empName": "Disney",
+        "empEmail": "disney@Dotcod.in",
+        "empLeaveType": "Sick Leave",
+        "empLeaveReason": "Migraine",
+        "empNoOfDays": 1,
+        "empLeaveRequestDate": "15/03/2024",
+        "empLeaveStatus": "Pending"
+    },
+    {
+        "empId": "11D006",
+        "empName": "Prime Therapeutics",
+        "empEmail": "pt@Dotcod.in",
+        "empLeaveType": "Casual Leave",
+        "empLeaveReason": "Urgent personal work",
+        "empNoOfDays": 2,
+        "empLeaveRequestDate": "10/06/2024 - 11/06/2024",
+        "empLeaveStatus": "Approved"
+    },
+    {
+        "empId": "11D007",
+        "empName": "Match.com",
+        "empEmail": "code@Dotcod.in",
+        "empLeaveType": "Sick Leave",
+        "empLeaveReason": "Food poisoning",
+        "empNoOfDays": 2,
+        "empLeaveRequestDate": "28/02/2024 - 29/02/2024",
+        "empLeaveStatus": "Rejected"
+    },
+    {
+        "empId": "11D008",
+        "empName": "Chevy",
+        "empEmail": "chevy@Dotcod.in",
+        "empLeaveType": "Casual Leave",
+        "empLeaveReason": "Attending a wedding",
+        "empNoOfDays": 3,
+        "empLeaveRequestDate": "20/04/2024 - 22/04/2024",
+        "empLeaveStatus": "Pending"
+    }
+]

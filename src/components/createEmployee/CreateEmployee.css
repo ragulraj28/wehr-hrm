@@ -1,0 +1,59 @@
+.create-employee {
+
+    @apply mt-4 flex flex-col gap-4;
+
+    .form-card {
+
+        @apply px-7 py-5 rounded-xl border border-border-secondary bg-white;
+
+        .form-header {
+
+            @apply flex justify-between items-center gap-5;
+
+            .form-title {
+
+                @apply font-medium text-sec-title mb-4;
+
+            }
+
+            .toggle {
+
+                @apply bg-gray-200 h-9 w-9 rounded-full flex items-center justify-center cursor-pointer;
+
+            }
+
+        }
+
+        .input-wrapper {
+
+            @apply grid grid-cols-3 gap-y-10 gap-x-16 py-4;
+
+            .element-wrapper {
+
+                @apply flex flex-col gap-y-1;
+
+                label {
+
+                    @apply text-sec-title text-sm;
+
+                }
+
+                input, select {
+
+                    @apply outline-none border border-border-primary rounded-md py-4 px-5 w-full placeholder:text-gray-400 text-sec-sub-title;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .create-employee-footer {
+
+        @apply flex items-center gap-20 justify-end sticky bottom-0;
+
+    }
+
+}

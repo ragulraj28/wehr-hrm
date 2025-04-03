@@ -1,0 +1,67 @@
+@import './components/login/Login.css';
+@import  './components/main/Main.css';
+@import  './components/sidebar/Sidebar.css';
+@import  './components/dashboard/Dashboard.css';
+@import './components/header/Header.css';
+@import './components/search/Search.css';
+@import './components/dashboard/MyCalendar.css';
+@import './components/dashboard/Announcement.css';
+@import './components/dashboard/BirthdayCalendar.css';
+@import './components/announcement/Announcement.css';
+@import './components/attendance/Attendance.css';
+@import './components/employee/Employee.css';
+@import './components/payRoll/PayRoll.css';
+@import './components/settings/Settings.css';
+@import './components/support/Support.css';
+@import './components/task/Task.css';
+@import './components/table/Table.css';
+@import './components/subHeader/SubHeader.css';
+@import './components//createEmployee/CreateEmployee.css';
+@import './components/statsCard/StatsCard.css';
+@import './components/attendance/leaveRequest/LeaveRequest.css';
+
+#root {
+
+  @apply container mx-auto font-primary overflow-x-hidden;
+
+  button {
+
+    @apply cursor-pointer;
+    
+  }
+
+  .cta-btn {
+
+    @apply flex items-center gap-1 outline-none border-2 border-black py-2 px-3 rounded-lg text-sm font-semibold transition-all duration-300;
+
+    &.fill {
+
+        @apply bg-black text-white;
+
+    }
+
+    &.outline {
+
+        @apply text-black bg-white;
+
+    }
+
+    &:hover {
+
+        &.fill {
+
+            @apply bg-white text-black;
+
+        }
+
+        &.outline {
+
+            @apply bg-black text-white;
+
+        }
+        
+    }
+
+  }
+   
+}

@@ -1,0 +1,77 @@
+.dashboard {
+
+    @apply flex flex-col 2xl:flex-row gap-5 justify-between text-tertiary;
+
+    .sec-title {
+
+        @apply font-medium text-lg;
+
+    }
+
+    .col-stats {
+
+        @apply w-full 2xl:w-[55%];
+
+        .stats-count {
+
+            @apply leading-none;
+
+        }
+
+        .card-wrapper {
+
+            @apply flex flex-col md:flex-row gap-4 mb-5 last:mb-0;
+
+            .stats-graph-card {
+
+                @apply w-full p-5 rounded-lg border border-border-primary flex items-center gap-5 justify-between;
+
+                .stats-title {
+
+                    @apply text-lg font-medium mb-5;
+
+                }
+
+                .stats-count {
+
+                    @apply text-5xl font-medium;
+
+                }
+
+                .employees-count {
+
+                    @apply mt-8;
+
+                    p {
+
+                        @apply text-xs text-primary-sub-title mb-1 last:mb-0;
+
+                    }
+
+                }
+
+                .percentage {
+
+                    @apply px-2.5 py-1 text-sec-title bg-[#FFEFE7] text-xs rounded;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .col-calendar {
+
+        @apply 2xl:w-[43%];
+
+        .sec-title {
+
+            @apply mt-9 mb-3;
+
+        }
+        
+    }
+
+}

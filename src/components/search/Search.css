@@ -1,0 +1,11 @@
+.search {
+
+    @apply border border-border-primary px-4 rounded-sm flex gap-2.5 items-center bg-sec-background font-normal;
+
+    input {
+
+        @apply w-full outline-none py-2.5 text-[#b3b3b3] placeholder:text-[#b3b3b3];
+
+    }
+
+}

@@ -1,0 +1,23 @@
+.main-container {
+
+    @apply h-screen flex overflow-hidden;
+
+    .right-container {
+
+        @apply w-full xl:w-4/5 pb-7.5;
+
+        .scroll-container {
+
+            @apply overflow-auto h-[87%] px-5 md:px-12.5;
+
+            .page-title {
+
+                @apply font-medium text-2xl mt-5 mb-3 text-tertiary;
+    
+            }
+
+        }
+
+    }
+
+}

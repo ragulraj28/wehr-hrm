@@ -1,0 +1,45 @@
+.attendance {
+
+    .card-wrapper {
+
+        @apply flex gap-10.5;
+
+        .emp-card {
+
+            @apply flex flex-col items-center justify-end pb-8.5 gap-2 p-2.5 h-39 w-39 rounded border-2 border-border-primary mt-2 bg-white;
+
+            svg {
+
+                @apply text-[#BEBEBE];
+
+            }
+
+            span {
+
+                @apply inline-block text-[#373737] text-xs;
+
+            }
+
+            &:hover {
+
+                @apply border-primary shadow-lg;
+
+                svg, span {
+
+                    @apply text-primary;
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.attendance-list {
+
+    @apply flex flex-col h-full;
+    
+}

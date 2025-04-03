@@ -1,0 +1,31 @@
+.leave-request {
+
+    .card-wrapper {
+
+        @apply flex flex-col md:flex-row gap-6 py-6;
+
+        .stats-with-indicator {
+
+            @apply relative w-full;
+
+            .indicator-data {
+
+                @apply block text-xs text-sec-title absolute bottom-1.5 right-3.5;
+
+            }
+
+        }
+
+    }
+
+    .table-wrapper {
+
+        .leave-status {
+
+            @apply py-1 px-3 rounded flex gap-2 items-center text-[10px];
+
+        }
+
+    }
+
+}
