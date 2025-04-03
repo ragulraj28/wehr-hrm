@@ -1,6 +1,6 @@
 .main-container {
 
-    @apply h-screen flex overflow-hidden;
+    @apply h-screen flex overflow-hidden relative;
 
     .right-container {
 

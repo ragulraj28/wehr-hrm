@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import Search from '../search/Search'
 import { AgGridReact } from 'ag-grid-react';
 import { AllCommunityModule, ModuleRegistry, themeQuartz } from 'ag-grid-community'; 
+import useResize from '../../hooks/resizeHook';
 
 // Register all Community features
 ModuleRegistry.registerModules([AllCommunityModule]);
@@ -12,16 +13,7 @@ const myTheme = themeQuartz.withParams({
 
 const Table = ({tableTitle, searchValue, searchHandler, rowData, colDefs, rowSelection}) => {
 
-    const[winWidth, setwinWidth] = useState(window.innerWidth); 
-
-    const handleResize = () => {
-        setwinWidth(window.innerWidth);
-    }
-
-    useEffect(()=>{
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    },[])
+    const winWidth = useResize();
 
     const customComponent = (props) => {        
         const{ empId, empName, empDesignation, empEmail, empJoinDate, empStatus } = props.data;

@@ -10,7 +10,13 @@ header {
 
     .left-col {
 
-        @apply max-w-86 w-full;
+        @apply max-w-86 w-full flex items-center gap-5;
+
+        .mobile-menu {
+
+            @apply xl:hidden;
+            
+        }
 
         .page-title {
 

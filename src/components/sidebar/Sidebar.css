@@ -1,10 +1,16 @@
 .sidebar {
 
-    @apply hidden xl:block w-1/5 bg-sec-background px-7.5 py-2.5 border-r border-border-primary;
+    @apply absolute top-0 left-0 xl:relative h-full xl:w-1/5 bg-sec-background px-7.5 py-2.5 border-r border-border-primary;
 
     .logo {
 
-        @apply text-center font-semibold text-4xl mb-19;
+        @apply xl:text-center font-semibold text-4xl mb-19;
+
+    }
+
+    .sidebar-close {
+
+        @apply absolute top-5 right-3 inline-block xl:hidden text-sec-sub-title;
 
     }
 

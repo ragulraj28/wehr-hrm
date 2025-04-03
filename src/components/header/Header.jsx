@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import userProfile from '/assets/user.jpg'
-import { BellIcon, ChevronDownIcon, MessageIcon } from '../../assets/icons/icon'
+import { BellIcon, BurgerMenuIcon, ChevronDownIcon, MessageIcon } from '../../assets/icons/icon'
+import { SidebarToggleContext } from '../../contexts/SidebarToggle'
 
 const Header = ({leftCol}) => {
+
+  const{ sidebarToggle, setSidebarToggle } = useContext(SidebarToggleContext);
+  const mobileNavbarHandler = () => {
+
+    setSidebarToggle(prev => !prev);
+
+  }
 
   return (
     <header>
         <div className="left-col">
+            <div className="mobile-menu" onClick={mobileNavbarHandler}>
+                <BurgerMenuIcon />
+            </div>
             {leftCol}
         </div>
         <div className="right-col">
