@@ -1,9 +1,12 @@
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
 import logo from '../../assets/wehr-logo.svg'
 import pattern from '../../assets/wehr-pattern.svg'
 import { Navigate } from 'react-router';
+import { LoginContext } from '../../contexts/LoginContext';
 
-const Login = ({credentials, setIsLoggedIn, isLoggedIn}) => {
+const Login = ({credentials}) => {
+
+    const { userLoggedIn, setUserLoggedIn } = useContext(LoginContext);
 
     const companyId = useRef();
     const password = useRef();
@@ -14,14 +17,14 @@ const Login = ({credentials, setIsLoggedIn, isLoggedIn}) => {
         if(credentials.companyId == companyId.current.value && credentials.password == password.current.value) {
             alert('Logged in successfully');
             localStorage.setItem('isLoggedIn','true');
-            setIsLoggedIn(true);
+            setUserLoggedIn(true);
             rememberMe.current.checked ? localStorage.setItem('rememberMe', 'true') :localStorage.removeItem('rememberMe');
         } else {
             alert('Invalid credentials');
         }
     }
 
-    return isLoggedIn ? <Navigate to={'/'}/> : (
+    return userLoggedIn ? <Navigate to={'/'}/> : (
         <div className='login'>
             <div className="form-wrapper">
                 <div className="logo">

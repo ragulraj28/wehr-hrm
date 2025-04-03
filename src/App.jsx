@@ -19,12 +19,11 @@ import AttendanceList from './components/attendance/AttendanceList';
 import LeaveRequest from './components/attendance/leaveRequest/LeaveRequest';
 import Search from './components/search/Search';
 import { SidebarToggleProvider } from './contexts/SidebarToggle';
+import { LoginProvider } from './contexts/LoginContext';
 
 function App() {
 
   const credentials = {companyId: 'wehr2025', password:'wehr2025'};
-
-  const [isLoggedIn , setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') == 'true');
 
   if(!localStorage.getItem("empDetails")) {
 
@@ -33,48 +32,51 @@ function App() {
   }    
 
   return (
+    <LoginProvider>
 
-    <SidebarToggleProvider>
+      <SidebarToggleProvider>
 
-      <EmployeeProvider>
+        <EmployeeProvider>
 
-        <BrowserRouter>
+          <BrowserRouter>
 
-          <Routes>
+            <Routes>
 
-            <Route path='/login' element={<Login credentials={credentials} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}/>
+              <Route path='/login' element={<Login credentials={credentials}/>}/>
 
-            <Route path='/' element={<ProtectedRoute isLoggedIn={isLoggedIn}><Main headerLeftCol={<Search placeholder={'Search Employee'}/>}><Dashboard /></Main></ProtectedRoute>}/>
+              <Route path='/' element={<ProtectedRoute ><Main headerLeftCol={<Search placeholder={'Search Employee'}/>}><Dashboard /></Main></ProtectedRoute>}/>
+              
+              <Route path='/employee' element={<ProtectedRoute ><Main><Employee /></Main></ProtectedRoute>}/>
+              
+              <Route path='/create-employee' element={<ProtectedRoute ><Main headerLeftCol={<h2 className='page-title'>Employee</h2>}><CreateEmployee /></Main></ProtectedRoute>}/>
+              
+              <Route path='/employee-list' element={<ProtectedRoute ><Main><EmployeeList /></Main></ProtectedRoute>}/>
+              
+              <Route path='/attendance' element={<ProtectedRoute ><Main><Attendance /></Main></ProtectedRoute>}/>
+              
+              <Route path='/attendance-list' element={<ProtectedRoute ><Main><AttendanceList /></Main></ProtectedRoute>}/>
+              
+              <Route path='/leave-request' element={<ProtectedRoute ><Main headerLeftCol={<h2 className='page-title'>Leave Request</h2>}><LeaveRequest /></Main></ProtectedRoute>}/>
+              
+              <Route path='/payroll' element={<ProtectedRoute ><Main><PayRoll /></Main></ProtectedRoute>}/>
+              
+              <Route path='/task' element={<ProtectedRoute ><Main><Task /></Main></ProtectedRoute>}/>
+              
+              <Route path='/announcement' element={<ProtectedRoute ><Main><Announcement /></Main></ProtectedRoute>}/>
+              
+              <Route path='/support' element={<ProtectedRoute ><Main><Support /></Main></ProtectedRoute>}/>
+              
+              <Route path='/settings' element={<ProtectedRoute ><Main><Settings /></Main></ProtectedRoute>}/>
             
-            <Route path='/employee' element={<ProtectedRoute isLoggedIn={isLoggedIn}><Main><Employee /></Main></ProtectedRoute>}/>
-            
-            <Route path='/create-employee' element={<ProtectedRoute isLoggedIn={isLoggedIn}><Main headerLeftCol={<h2 className='page-title'>Employee</h2>}><CreateEmployee /></Main></ProtectedRoute>}/>
-            
-            <Route path='/employee-list' element={<ProtectedRoute isLoggedIn={isLoggedIn}><Main><EmployeeList /></Main></ProtectedRoute>}/>
-            
-            <Route path='/attendance' element={<ProtectedRoute isLoggedIn={isLoggedIn}><Main><Attendance /></Main></ProtectedRoute>}/>
-            
-            <Route path='/attendance-list' element={<ProtectedRoute isLoggedIn={isLoggedIn}><Main><AttendanceList /></Main></ProtectedRoute>}/>
-            
-            <Route path='/leave-request' element={<ProtectedRoute isLoggedIn={isLoggedIn}><Main headerLeftCol={<h2 className='page-title'>Leave Request</h2>}><LeaveRequest /></Main></ProtectedRoute>}/>
-            
-            <Route path='/payroll' element={<ProtectedRoute isLoggedIn={isLoggedIn}><Main><PayRoll /></Main></ProtectedRoute>}/>
-            
-            <Route path='/task' element={<ProtectedRoute isLoggedIn={isLoggedIn}><Main><Task /></Main></ProtectedRoute>}/>
-            
-            <Route path='/announcement' element={<ProtectedRoute isLoggedIn={isLoggedIn}><Main><Announcement /></Main></ProtectedRoute>}/>
-            
-            <Route path='/support' element={<ProtectedRoute isLoggedIn={isLoggedIn}><Main><Support /></Main></ProtectedRoute>}/>
-            
-            <Route path='/settings' element={<ProtectedRoute isLoggedIn={isLoggedIn}><Main><Settings /></Main></ProtectedRoute>}/>
-          
-          </Routes>
+            </Routes>
 
-        </BrowserRouter>
+          </BrowserRouter>
 
-      </EmployeeProvider>
-      
-    </SidebarToggleProvider>
+        </EmployeeProvider>
+        
+      </SidebarToggleProvider>
+
+    </LoginProvider>
     
   )
 
