@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import logo from '../../assets/wehr-logo.svg'
 import pattern from '../../assets/wehr-pattern.svg'
 import { Navigate } from 'react-router';
@@ -23,6 +23,12 @@ const Login = ({credentials}) => {
             alert('Invalid credentials');
         }
     }
+
+    useEffect(()=> {
+
+        alert("Company ID & Passwrod: "+ credentials.companyId);
+
+    }, [])
 
     return userLoggedIn ? <Navigate to={'/'}/> : (
         <div className='login'>
